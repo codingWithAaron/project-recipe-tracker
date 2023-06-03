@@ -9,7 +9,7 @@ function Recipe({recipe, deleteRecipe}){
             <td className="content_td"><p>{recipe.ingredients}</p></td>
             <td className="content_td"><p>{recipe.preparation}</p></td>
             <button name="delete" onClick={()=>{deleteRecipe(recipe)}}>Delete</button>
-          </tr>
+        </tr>
     )
 }
 
