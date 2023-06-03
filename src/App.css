@@ -54,6 +54,10 @@ table {
   text-overflow: ellipsis;
 }
 
+img {
+  width: 75%;
+}
+
 /* Column Size for thead */
 
 

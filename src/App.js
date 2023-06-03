@@ -15,12 +15,16 @@ function App() {
     })
     setRecipes(updatedRecipes)
   }
+
+  function addRecipeHandler(newRecipe){
+    setRecipes([...recipes, newRecipe])
+  }
   
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
       <RecipeList recipes={recipes} deleteRecipe={deleteRecipe}/>
-      <RecipeCreate recipes={recipes} setRecipes={setRecipes}/>
+      <RecipeCreate recipes={recipes} setRecipes={setRecipes} addRecipeHandler={addRecipeHandler}/>
     </div>
   );
 }
