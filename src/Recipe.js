@@ -1,6 +1,6 @@
 import React from "react";
 
-function Recipe({recipe}){
+function Recipe({recipe, deleteRecipe}){
     return (
         <tr>
             <td>{recipe.name}</td>
@@ -8,7 +8,7 @@ function Recipe({recipe}){
             <td><img src={recipe.photo}></img></td>
             <td>{recipe.ingredients}</td>
             <td>{recipe.preparation}</td>
-            <button name="delete">Delete</button>
+            <button name="delete" onClick={()=>{deleteRecipe(recipe)}}>Delete</button>
           </tr>
     )
 }

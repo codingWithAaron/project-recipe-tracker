@@ -2,7 +2,7 @@ import React from "react";
 import RecipeData from "./RecipeData";
 import Recipe from "./Recipe";
 
-function RecipeList({recipes}) {
+function RecipeList({recipes, deleteRecipe}) {
 
   
   // TODO: Display the list of recipes using the structure of table that is provided.
@@ -23,7 +23,7 @@ function RecipeList({recipes}) {
           </tr>
         </thead>
         <tbody>
-          {recipes.map((recipe) => <Recipe recipe={recipe} key={recipe.name} />)}
+          {recipes.map((recipe) => <Recipe recipe={recipe} key={recipe.name} deleteRecipe={deleteRecipe} />)}
         </tbody>
       </table>
     </div>
